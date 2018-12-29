@@ -1,0 +1,22 @@
+<p>
+  这是child的第一个子模块
+</p>
+<!-- <div nz-row>
+  <div nz-col nzSpan="12" style="background-color:#fff;">col-12</div>
+  <div nz-col nzSpan="12" style="background-color:#ccc;">col-12</div>
+</div>
+<div nz-row>
+  <div nz-col nzSpan="8" style="background-color:#fff;">col-8</div>
+  <div nz-col nzSpan="8" style="background-color:#ccc;">col-8</div>
+  <div nz-col nzSpan="8" style="background-color:#fff;">col-8</div>
+</div>
+<div nz-row>
+  <div nz-col nzSpan="6" style="background-color:#ccc;">col-6</div>
+  <div nz-col nzSpan="6" style="background-color:#fff;">col-6</div>
+  <div nz-col nzSpan="6" style="background-color:#ccc;">col-6</div>
+  <div nz-col nzSpan="6" style="background-color:#fff;">col-6</div>
+</div> -->
+
+<nz-carousel [nzEffect]="'fade'" nzAutoPlay>
+  <div nz-carousel-content *ngFor="let index of array"><h3>{{index}}</h3></div>
+</nz-carousel>

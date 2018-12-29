@@ -1,0 +1,12 @@
+<p>
+  这是child的第二个子模块 
+</p>
+<div style="border:1px solid #ccc;border-radius:4px;background-color:#fff;color:blue;line-height:60px;margin-bottom: 10px;" (click)='child.childFun(child2Message)'>本地模板变量</div>
+<div style="border:1px solid #ccc;border-radius:4px;background-color:#fff;color:blue;line-height:60px;margin-bottom: 10px;" (click)='viewChild()'>viewChild传值</div>
+<!-- <nz-badge [nzCount]="200" [nzOverflowCount]="10"><a class="head-example"></a></nz-badge> -->
+<div>
+  <div class="button" (click)='moduleClick()'>模态框按钮</div>
+</div>
+<app-form-module  [childTwo]='childTwo' (Childcancel)="cancel($event)"></app-form-module>
+<app-child2 #child></app-child2>
+

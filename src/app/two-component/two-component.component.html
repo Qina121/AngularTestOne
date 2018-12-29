@@ -1,0 +1,72 @@
+<p style="font-size:32px;line-height:50px;text-align: center;">
+  two-component works!
+</p>
+<!-- <button nz-button (click)="createBasicMessage()">Display normal message</button> -->
+    <nz-breadcrumb nzSeparator=">" [nzAutoGenerate]=true>
+      <nz-breadcrumb-item>
+        Home
+      </nz-breadcrumb-item>
+      <nz-breadcrumb-item>
+        <a>第二个Component</a>
+      </nz-breadcrumb-item>
+      <!-- <nz-breadcrumb-item>
+        An Application
+      </nz-breadcrumb-item> -->
+    </nz-breadcrumb>
+
+<div style="margin-top:20px;">
+  <div class="left">
+    <!-- <ul>
+      <li (click)='selectChild(1)'>childOne</li>
+      <li (click)='selectChild(2)'>childTwo</li>
+      <li (click)='selectChild(3)'>childThree</li>
+    </ul> -->
+    
+    <div style="width: 280px;" class="nav">
+      <!-- <button nz-button [nzType]="'primary'" (click)="toggleCollapsed()" style="margin-bottom: 10px;">
+        <i nz-icon [type]="isCollapsed?'menu-unfold':'menu-fold'"></i>
+      </button> -->
+      <ul nz-menu [nzMode]="'inline'" nzTheme='dark' [nzInlineCollapsed]="isCollapsed">
+        <li  nz-menu-item nz-tooltip nzPlacement="right" [nzTitle]="isCollapsed ? 'Navigation One' : ''" (click)='selectChild(1)'>
+          <span title>
+            <!-- <i nz-icon type="mail"></i> -->
+            <span >第一个子模块</span>
+          </span>
+        </li>
+        <li nz-menu-item  (click)='selectChild(2)'>
+          <span title>
+            <!-- <i nz-icon type="appstore"></i> -->
+            <span>轮播图</span>
+          </span>
+          <ul>
+            <!-- <li nz-menu-item>Option 5</li>
+            <li nz-menu-item>Option 6</li> -->
+            <!-- <li nz-submenu>
+              <span title>Submenu</span>
+              <ul>
+                <li nz-menu-item>Option 7</li>
+                <li nz-menu-item>Option 8</li>
+              </ul>
+            </li> -->
+          </ul>
+        </li>
+        <li nz-submenu (click)='selectChild(3)'>
+          <span title>
+            <!-- <i nz-icon type="setting"></i> -->
+            <span>栅格式布局</span>
+          </span>
+          <!-- <ul>
+            <li nz-menu-item>Option 9</li>
+            <li nz-menu-item>Option 10</li>
+            <li nz-menu-item>Option 11</li>
+          </ul> -->
+        </li>
+      </ul>
+    </div>
+
+
+  </div>
+  <div class="right">
+      <router-outlet></router-outlet>
+  </div>
+</div>
