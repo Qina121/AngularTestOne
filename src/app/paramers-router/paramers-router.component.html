@@ -1,0 +1,18 @@
+<p>
+  paramers-router works!
+</p>
+<ul>
+  <li *ngFor="let item of items,let _index = index" (click)="selectColor(_index)">{{item.color}}</li>
+</ul>
+<div *ngIf="param === 'one'" style="background-color:antiquewhite;">
+  <span>parameters 参数为粉色</span>
+</div>
+<div *ngIf="param === 'two'" style="background-color:palegreen;">
+  <span>parameters 参数为绿色</span>
+</div>
+<div *ngIf="param === 'three'" style="background-color:paleturquoise;">
+  <span>parameters 参数为浅蓝色</span>
+</div>
+<div *ngIf="param === 'four'" style="background-color:palevioletred;">
+  <span>parameters 参数为西瓜红色</span>
+</div>

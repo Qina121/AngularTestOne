@@ -13,6 +13,7 @@ import { ChildThreeComponent } from '../child-three/child-three.component';
 import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
+import { ParamersRouterComponent } from '../paramers-router/paramers-router.component';
 export const appRoutes = [
   {
     path: '',
@@ -33,6 +34,14 @@ export const appRoutes = [
       {path: 'childThree', component: ChildThreeComponent, data: { breadcrumb: '栅格式布局'}},
       {path: '', redirectTo: 'childOne', pathMatch: 'full'}
     ]
+  },
+  {
+    path: 'four',
+    component: ParamersRouterComponent
+  },
+  {
+    path: 'four/:id',
+    component: ParamersRouterComponent
   },
   {
     path: '**',

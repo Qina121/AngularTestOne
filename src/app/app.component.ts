@@ -7,7 +7,7 @@ import { Router } from '@angular/router';
 })
 export class AppComponent {
   title = 'angularOberver';
-  navList = [{id: 'one', text: '首页'}, {id: 'two', text: '第一个分页'}, {id: 'three', text: '这个是未填写的页面'}];
+  navList = [{id: 'one', text: '首页'}, {id: 'two', text: '第一个分页'}, {id: 'three', text: '这个是未填写的页面'}, {id: 'four', text: '路由传参'}];
   constructor(
     private _router: Router
   ) {

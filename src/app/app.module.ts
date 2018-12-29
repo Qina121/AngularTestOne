@@ -19,6 +19,7 @@ registerLocaleData(zh);
 import { TwoComponentModule } from './two-component/two-component.module';
 import { FormModuleComponent } from './form-module/form-module.component';
 import { Child2Component } from './child2/child2.component';
+import { ParamersRouterComponent } from './paramers-router/paramers-router.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { Child2Component } from './child2/child2.component';
     ChildThreeComponent,
     FormModuleComponent,
     Child2Component,
+    ParamersRouterComponent,
   ],
   imports: [
     BrowserModule,
