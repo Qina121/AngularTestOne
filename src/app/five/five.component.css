@@ -1,0 +1,24 @@
+:host ::ng-deep i {
+    font-size: 32px;
+    color: #999;
+}
+:host ::ng-deep .ant-upload-text {
+    margin-top: 8px;
+    color: #666;
+}
+.title{
+    font-size: 60px;
+    text-align: center;
+}
+.phontBox{
+    width: 1080px;
+    margin: 0 auto;
+}
+p{
+    text-align: center;
+}
+:host ::ng-deep .upload-list-inline .ant-upload-list-item {
+    float: left;
+    width: 200px;
+    margin-right: 8px;
+}

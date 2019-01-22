@@ -14,6 +14,10 @@ import { NgZorroAntdModule, NZ_I18N, zh_CN } from 'ng-zorro-antd';
 import { registerLocaleData } from '@angular/common';
 import zh from '@angular/common/locales/zh';
 import { ParamersRouterComponent } from '../paramers-router/paramers-router.component';
+import { DetailComponent } from '../detail/detail.component';
+import { PageNotFoundComponentModule } from '../page-not-found-component/page-not-found-component.module';
+import { FiveComponent } from '../five/five.component';
+// import { PageNotFoundComponentModule } from '../page-not-found-component/page-not-found-component.module';
 export const appRoutes = [
   {
     path: '',
@@ -40,8 +44,12 @@ export const appRoutes = [
     component: ParamersRouterComponent
   },
   {
-    path: 'four/:id',
-    component: ParamersRouterComponent
+    path: 'five',
+    component: FiveComponent
+  },
+  {
+    path: 'detail/:id',
+    component: DetailComponent
   },
   {
     path: '**',
@@ -53,12 +61,12 @@ export const appRoutes = [
     RouterModule.forRoot(appRoutes),
     BrowserModule,
     NgZorroAntdModule,
+    PageNotFoundComponentModule
 
   ],
   declarations: [
     OneComponentComponent,
     TwoComponentComponent,
-    PageNotFoundComponentComponent,
     // FormModuleComponent
   ],
   exports: [

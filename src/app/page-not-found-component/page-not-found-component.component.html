@@ -1,3 +1,18 @@
 <p style="font-size:38px;">
   Not Found
 </p>
+
+<div>以下是引用的插件</div>
+<div>
+  <nz-select style="width: 200px;" nzShowSearch nzAllowClear nzPlaceHolder="Select OS" [(ngModel)]="selectedOS">
+    <nz-option nzCustomContent nzLabel="Windows" nzValue="windows">
+      <i class="fa fa-car"></i> 
+      Windows</nz-option>
+    <nz-option nzCustomContent nzLabel="Mac" nzValue="mac">
+      <i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 
+      Mac</nz-option>
+    <nz-option nzCustomContent nzLabel="Android" nzValue="android">
+      <i class="fa fa-motorcycle" aria-hidden="true"></i> 
+      Android</nz-option>
+  </nz-select>
+</div>

@@ -1,0 +1,57 @@
+<p class="title">
+    It's so beautiful
+</p>
+<div>
+  <div style="float:right;width:100px;height:60px;line-height:60px;margin-right: 100px;border-radius:4px;background-color: blue;color: #fff;font-size: 18px;text-align: center;" (click)="save()">保存</div>
+</div>
+<div class="clearfix phontBox">
+    <nz-upload
+      nzAction="https://jsonplaceholder.typicode.com/posts/"
+      nzListType="picture-card"
+      [(nzFileList)]="fileList"
+      [nzShowButton]="fileList.length < 3"
+      [nzPreview]="handlePreview">
+        <i nz-icon type="plus"></i>
+        <div class="ant-upload-text">Upload</div>
+    </nz-upload>
+    <nz-modal [nzVisible]="previewVisible" [nzContent]="modalContent" [nzFooter]="null" (nzOnCancel)="previewVisible=false">
+      <ng-template #modalContent>
+        <img [src]="previewImage" [ngStyle]="{ 'width': '100%' }" />
+      </ng-template>
+    </nz-modal>
+  </div>
+  <p style="font-size:20px;">上传图片列表无图</p>
+  <div style="width:1080px;margin:0 auto;">
+      <nz-upload
+      nzAction="https://jsonplaceholder.typicode.com/posts/"
+      [nzFileList]="fileListMore">
+      <button nz-button>
+        <i nz-icon type="upload"></i><span>上传</span>
+      </button>
+    </nz-upload>
+  </div>
+  <p style="font-size:20px;">上传图片列表有图</p>
+  <div style="width:1080px;margin:0 auto;">
+      <!-- <div class="clearfix">
+          <nz-upload
+            nzAction="https://jsonplaceholder.typicode.com/posts/"
+            nzListType="picture"
+            [(nzFileList)]="fileList1">
+            <button nz-button>
+              <i nz-icon type="upload"></i><span>Upload</span>
+            </button>
+          </nz-upload>
+        </div>
+          <br><br> -->
+        <div class="clearfix">
+          <nz-upload class="upload-list-inline"
+            nzAction="https://jsonplaceholder.typicode.com/posts/"
+            nzListType="picture"
+            [(nzFileList)]="fileList2"
+            [nzRemove]="photoRemove">
+            <button nz-button>
+              <span><i nz-icon type="upload"></i> Upload</span>
+            </button>
+          </nz-upload>
+        </div>
+  </div>

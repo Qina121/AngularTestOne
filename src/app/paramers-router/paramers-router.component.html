@@ -4,7 +4,7 @@
 <ul>
   <li *ngFor="let item of items,let _index = index" (click)="selectColor(_index)">{{item.color}}</li>
 </ul>
-<div *ngIf="param === 'one'" style="background-color:antiquewhite;">
+<div *ngIf="param === 'one'" style="background-color:pink;">
   <span>parameters 参数为粉色</span>
 </div>
 <div *ngIf="param === 'two'" style="background-color:palegreen;">
@@ -16,3 +16,4 @@
 <div *ngIf="param === 'four'" style="background-color:palevioletred;">
   <span>parameters 参数为西瓜红色</span>
 </div>
+<!-- <app-detail></app-detail> -->
